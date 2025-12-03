@@ -1,4 +1,4 @@
-package worker
+package main
 
 import (
 	"fmt"
@@ -9,9 +9,9 @@ import (
 	"github.com/IBM/sarama"
 )
 
-func worker() {
+func main() {
 	topic := "comments"
-	consumerClient, err := connectConsumer([]string{"localhost:29092"})
+	consumerClient, err := connectConsumer([]string{"localhost:9092"})
 	if err != nil {
 		panic(err)
 	}

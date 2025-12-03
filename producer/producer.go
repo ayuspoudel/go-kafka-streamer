@@ -73,7 +73,7 @@ func createComment(c *fiber.Ctx) error {
 }
 
 func PushCommentToQueue(topic string, message []byte) error {
-	brokersUrl := []string{"localhost:29092"}
+	brokersUrl := []string{"localhost:9092"}
 	producer, err := ConnectProducer(brokersUrl)
 	if err != nil {
 		return err
